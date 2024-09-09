@@ -2,6 +2,8 @@
 let body = $response.body;
 let obj = JSON.parse(body); // 解析为JSON对象
 
+console.log("obj: " + obj);    
+
 // 提取token字段
 let token = obj.token;
 
