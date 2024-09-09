@@ -8,7 +8,7 @@ let token = obj.token;
 // 将提取的token保存到圈X环境变量
 if (token) {
   $prefs.setValueForKey(token, "wechat_token");  // 保存token
-  $clipboard.set(token);  // 保存到剪贴板
+  $notify("Token 提取成功", "点击复制", token); // 发送通知
   console.log("Token saved: " + token);          // 打印日志
 } else {
   console.log("Token not found in response");     // 无法提取时的日志提示
