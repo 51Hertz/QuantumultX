@@ -10,7 +10,6 @@ const newData = {"id": id, "userId": userId, "token": token};
 if (token) {
     $prefs.setValueForKey(newData, "INSTAX");  // 保存token
     console.log("Token newData: " + JSON.stringify(newData));          // 打印日志
-    console.log(`Token saved: id = ${id}, userId = ${userId}, token = ${token}`);  // 手动构建字符串
 } else {
     console.log("Token not found in response");     // 无法提取时的日志提示
 }
