@@ -9,7 +9,7 @@ const newData = {"id": id, "userId": userId, "token": token};
 // 将提取的token保存到圈X环境变量
 if (token) {
     $prefs.setValueForKey(newData, "INSTAX");  // 保存token
-    console.log("Token newData: " + newData);          // 打印日志
+    console.log("Token newData: " + JSON.stringify(newData));          // 打印日志
 } else {
     console.log("Token not found in response");     // 无法提取时的日志提示
 }
